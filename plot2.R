@@ -1,0 +1,5 @@
+NEI <- readRDS("summarySCC_PM25.rds")
+SCC <- readRDS("Source_Classification_Code.rds")
+sub <- subset(NEI, fips == "24510")
+sol2 <- tapply(sub$Emissions, sub$year, sum)
+barplot(sol2, main="Total pollutant emission in Baltimore City", xlab="Year", ylab="Total tons emitted")
