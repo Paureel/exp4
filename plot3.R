@@ -12,3 +12,7 @@ res = ddply(sub, groupColumns, function(x) colSums(x[dataColumns]))
 res$year <- as.factor(res$year)
 g <- ggplot(res, aes(year, Emissions)) +   
   geom_bar(aes(fill = type), position = "dodge", stat="identity")
+
+g
+dev.copy(png,'plot3.png')
+dev.off()

@@ -16,3 +16,6 @@ sol.cal <- tapply(cal$Emissions, cal$year, sum)
 par(mfrow=c(1,2))
 barplot(sol.balti, main="Total motor vehicle related pollutant emissions in Baltimore", xlab="Year", ylab="Total tons emitted")
 barplot(sol.cal, main="Total motor vehicle related pollutant emissions in California", xlab="Year", ylab="Total tons emitted")
+
+dev.copy(png,'plot6.png')
+dev.off()

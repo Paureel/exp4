@@ -6,3 +6,7 @@ sub <- subset(NEI, fips == "24510")
 #plot the total pollutant value
 sol2 <- tapply(sub$Emissions, sub$year, sum)
 barplot(sol2, main="Total pollutant emission in Baltimore City", xlab="Year", ylab="Total tons emitted")
+
+
+dev.copy(png,'plot2.png')
+dev.off()

@@ -12,3 +12,6 @@ df4 <- subset(df4, fips == "24510")
 #group the data and plot it
 sol4 <- tapply(df4$Emissions, df4$year, sum)
 barplot(sol4, main="Total motor vehicle related pollutant emissions", xlab="Year", ylab="Total tons emitted")
+
+dev.copy(png,'plot5.png')
+dev.off()

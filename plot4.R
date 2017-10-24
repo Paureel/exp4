@@ -11,3 +11,7 @@ levels(df4$EI.Sector) <- unused
 #group the data and plot it
 sol4 <- tapply(df4$Emissions, df4$year, sum)
 barplot(sol4, main="Total coal combustion related pollutant emissions", xlab="Year", ylab="Total tons emitted")
+
+
+dev.copy(png,'plot4.png')
+dev.off()
